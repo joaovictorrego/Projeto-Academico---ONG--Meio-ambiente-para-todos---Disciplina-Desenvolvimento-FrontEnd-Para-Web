@@ -725,19 +725,19 @@ footer {
 
     /* Ajuste de cards em grid */
     .form-container {
-            padding: var(--spacing-md);
-            /* Adicionar padding para visualização */
-            margin: 0 auto;
-        
-            /* Propriedades que estavam soltas, agora dentro do seletor */
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-lg);
-        }
+        padding: var(--spacing-md);
+        /* Adicionar padding para visualização */
+        margin: 0 auto;
 
-nav ul {
-    gap: var(--spacing-md);
-}
+        /* Propriedades que estavam soltas, agora dentro do seletor */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    nav ul {
+        gap: var(--spacing-md);
+    }
 }
 
 /* Breakpoint 3: 992px (Medium / Desktop) */
