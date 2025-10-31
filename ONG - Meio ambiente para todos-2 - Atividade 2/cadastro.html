@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG - Meio Ambiente para Todos - Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="img/banner.png" alt="Banner principal do site - Meio Ambiente para Todos">
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="projetos.html">Projetos Sociais</a></li>
+            <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="full-width-content">
+        <!-- Page Header -->
+        <header style="text-align: center; margin-bottom: var(--spacing-xxl);">
+            <h1 style="color: white;">Formulário de Cadastro de Voluntário</h1>
+            <p style="font-size: var(--font-size-lg); color: var(--color-white);">Junte-se a nossa comunidade e faça a diferença!</p>
+        </header>
+
+        <!-- Form Container -->
+        <form action="/caminho-para-processar-o-cadastro" method="post" class="form-container">
+
+            <!-- Informações Pessoais -->
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <div class="form-group">
+                    <label for="nome" class="label-required">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name" placeholder="Digite seu nome completo">
+                    <span class="form-error" id="nomeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="label-required">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" autocomplete="email">
+                    <span class="form-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf" class="label-required">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato 000.000.000-00" autocomplete="off">
+                    <span class="form-error" id="cpfError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone" class="label-required">Telefone (com DDD)</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 90000-0000" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" title="Digite um telefone no formato (00) 90000-0000" autocomplete="tel">
+                    <span class="form-error" id="telefoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nascimento" class="label-required">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                    <span class="form-error" id="nascimentoError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Endereço -->
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <div class="form-group">
+                    <label for="cep" class="label-required">CEP</label>
+                    <input type="text" id="cep" name="cep" required placeholder="00000-000" pattern="\d{5}-\d{3}" title="Digite um CEP no formato 00000-000" autocomplete="postal-code">
+                    <span class="form-error" id="cepError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco" class="label-required">Endereço (Rua, Nº, Bairro)</label>
+                    <input type="text" id="endereco" name="endereco" required placeholder="Ex: Rua das Flores, 123, Centro" autocomplete="street-address">
+                    <span class="form-error" id="enderecoError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade" class="label-required">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="Digite sua cidade">
+                    <span class="form-error" id="cidadeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado" class="label-required">Estado</label>
+                    <select id="estado" name="estado" required autocomplete="address-level1">
+                        <option value="">Selecione um estado...</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="form-error" id="estadoError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Áreas de Interesse -->
+            <fieldset>
+                <legend>Áreas de Interesse</legend>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="interesse1" name="interesse" value="acao-campo">
+                        <label for="interesse1">Ação em Campo (Plantio, construção, adaptação)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="interesse2" name="interesse" value="educacao">
+                        <label for="interesse2">Apoio Educacional (Oficinas, materiais educativos)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="interesse3" name="interesse" value="habilidades-remotas">
+                        <label for="interesse3">Habilidades Remotas (Design, redes sociais, tradução)</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="reset" class="btn btn-outline">Limpar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="successMessage" class="alert alert-success" style="display: none; margin-top: var(--spacing-lg);">
+                ✓ Cadastro realizado com sucesso! Entraremos em contato em breve.
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meio Ambiente para Todos. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para Menu Mobile e Validação de Formulário -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Validação de Formulário
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validações básicas
+            let isValid = true;
+            const fields = form.querySelectorAll('input[required], select[required]');
+
+            fields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'var(--color-error)';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (isValid) {
+                // Mostrar mensagem de sucesso
+                document.getElementById('successMessage').style.display = 'block';
+                form.style.display = 'none';
+                
+                // Rolar para o topo
+                window.scrollTo(0, 0);
+            }
+        });
+
+        // Remover erro ao digitar
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                this.style.borderColor = '';
+            });
+        });
+    </script>
+</body>
+
+</html>
