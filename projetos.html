@@ -226,34 +226,7 @@
         <p>&copy; 2025 Meio Ambiente para Todos. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- JavaScript para Menu Mobile e Funcionalidades -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
 
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Fechar menu ao clicar em um link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Função para copiar chave PIX
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Chave PIX copiada para a área de transferência!');
-            }).catch(() => {
-                alert('Erro ao copiar. Tente novamente.');
-            });
-        }
-    </script>
 </body>
 
 </html>

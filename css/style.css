@@ -1796,3 +1796,32 @@ input[type="radio"] {
         max-width: none;
     }
 }
+/* ==========================================================================
+   4. Estilos Específicos para SPA e Validação (Entrega 3)
+   ========================================================================== */
+
+/* Estilo para inputs com erro (usado pelo JavaScript) */
+.input-error {
+    border: 2px solid var(--color-error) !important;
+    background-color: #ffebee; /* Cor de fundo suave para erro */
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: -10px; /* Ajusta a margem para ficar mais próximo do input */
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+/* Ajuste para o form-group para melhor alinhamento das mensagens de erro */
+.form-group {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Estilo para o link ativo na navegação */
+nav a.active {
+    background-color: var(--color-primary-700);
+    font-weight: bold;
+}
